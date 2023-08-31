@@ -1,0 +1,29 @@
+<head>
+    <link rel="stylesheet" href="./assets/styles/funds_list.css">
+</head>
+<div ng-init="load()">
+    <div class="header">
+        <div class="search-bar">
+            <input type="text" id="search-box" ng-model="searchText" placeholder="Search funds..."/>
+        </div>
+        <nav >
+            <a class="nav-link" ng-if="userInfo" href="#!favourites">FAVOURITES</a>
+            <a class="nav-link" href="#!about">ABOUT</a>
+            <button class="nav-link" ng-click="userInfo==null? login():logout()">{{userInfo==null? "LOGIN":"LOGOUT"}}</button> 
+        </div>
+
+    </div>
+    <div class="funds-list" id="funds">
+        <div class="card" ng-repeat="x in schemes | filter:searchText | limitTo:20">
+            <div class="name">{{x.schemeName}}</div>
+            <div class="code">{{x.schemeCode}}</div>
+            <div class="btn-grp">
+                <button class="btn" ng-click="details(x.schemeCode)">View</button>
+                <div ng-if="userInfo!=null">
+                    <button class="btn" ng-click="favourites[x.schemeCode]? removeFromFav(x.schemeCode):addToFav(x.schemeCode)">{{favourites[x.schemeCode]? "Remove":"Add"}}</button>    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,119 @@
+.header{
+    z-index: 1;
+    top:0px;
+    position: sticky;
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    padding: 10px;
+    background-color:blueviolet;
+}
+
+body{
+    background-color:whitesmoke;
+}
+.search-bar{
+    width: 75%;
+}
+
+#search-box{
+    width:60%;
+    border-radius: 5px;
+    padding: 10px;
+    border:none;
+}
+
+#search-box:focus{
+    box-shadow:  2px 2px 4px #ffffff,
+    -2px -2px 4px #ffffff;
+    outline:1px solid dodgerblue;
+}
+
+.btn{
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    box-shadow:  2px 2px 4px #bebebe,
+    -2px -2px 4px #ffffff;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+nav{
+    max-height: 50px;
+
+}
+.nav-link{
+    border: none;
+    background:none;
+    color:#fff;
+    font-size: medium;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.nav-link:hover{
+    color:lightblue;
+}
+
+.nav-link:active{
+    color: lightblue;
+}
+
+.funds-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: #bebebe;
+}
+.card{
+    width: 250px;
+    display: flex;
+    /* border: 1px solid black;  */
+    border-radius: 10px;
+    padding: 10px;
+    flex-direction: column;
+    margin: 5px;
+    flex-grow: 1;
+    border: 1px solid rgba(50, 46, 46, 0.06);
+    /* box-shadow: inset 2px 2px 4px #bebebe,
+    inset -2px -2px 1px #ffffff; */
+}
+
+.btn-grp{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    padding: 10px 0px;
+}

@@ -1,0 +1,40 @@
+<head>
+    <link rel="stylesheet" href="./assets/styles/details.css">
+    <link rel="stylesheet" href="./assets/styles/funds_list.css">
+</head>
+<div  class="container" ng-init="load()">
+    <div class="header">
+        <nav>
+            <a class="nav-link" href="#!">HOME</a>
+            <a class="nav-link" href="#!favourites">FAVOURITES</a>
+            <a class="nav-link" href="#!about">ABOUT</a>
+
+            <button class="nav-link" ng-click="logout()">LOGOUT</button>
+        </nav>
+    </div>
+    <div class="fundInfo">
+        <table>
+            <tr ng-repeat="(key, value) in metaDetails">
+                <td> {{key}} </td> <td> {{ value }} </td>
+            </tr>
+        </table>
+        <button class="alert-btn" ng-click="openModel()">Set target</button>    
+    </div>
+    <div class="model-container">
+        <div class="model">
+            <h3 class="title">Set Target</h3>
+            <div class="wrapper">
+                <div>Enter a target value:</div>
+                <input type="number" ng-model="target" />
+                <div class="model-btn-grp">
+                    <button class="confirm-btn" ng-click="setTarget()">Confirm</button>
+                    <button class="cancel-btn" ng-click="closeModel()">Cancel</button>
+                </div>      
+            </div>
+        </div>
+    
+    </div>
+    
+    </div>
+    <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+</div>

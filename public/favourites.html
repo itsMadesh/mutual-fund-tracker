@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="./assets/styles/funds_list.css">
+</head>
+<div>
+    <div class="header">
+        <nav>
+            <a class="nav-link" href="#!">HOME</a>
+            <a class="nav-link" href="#!about">ABOUT</a>
+            <button class="nav-link" ng-click="logout()">LOGOUT</button>
+        </nav>
+    </div>
+    <div class="funds-list" id="funds">
+        <div class="card" ng-repeat="x in schemes | filter: showFav() track by $index">
+            <div class="name">{{x.schemeName}}</div>
+            <div class="code">{{x.schemeCode}}</div>
+            <div class="btn-grp">
+                <button class="btn" ng-click="details(x.schemeCode)">View</button>
+                <button class="btn" ng-click="removeFromFav(x.schemeCode)">remove</button>
+            </div>
+        </div>
+    </div>
+</div>
